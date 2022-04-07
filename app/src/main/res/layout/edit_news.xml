@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditNews">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frameLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/titleTx"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:background="#393939"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="3"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/sourceTx"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/titleTx"
+                android:layout_marginTop="10dp"
+                android:background="#393939"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_marginBottom="10sp"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sourceTx"
+                android:layout_above="@+id/imB"
+                android:id="@+id/scroll"
+                android:background="#393939"
+                android:layout_marginBottom="10dp">
+                <TextView
+                    android:id="@+id/newsTx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+            </ScrollView>
+            <Button
+            android:id="@+id/imB"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="#393939"
+            android:layout_alignParentBottom="true"
+            android:text="Читать далее"
+            android:textSize="20sp"
+            android:onClick="OnClickReaderNews"
+
+            />
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+
+
+
+
+
+</RelativeLayout>
